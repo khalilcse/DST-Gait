@@ -1,0 +1,17 @@
+trainer:
+  gpus: 1
+  max_epochs: 750
+  log_every_n_steps: 25
+  check_val_every_n_epoch: 10
+model:
+  #backend_name: StGCN
+  learning_rate: 0.0001
+  loss_temperature: 0.07
+  embedding_layer_size: 128
+data:
+  data_path: "data" #"../data"
+  dataset_path: "datasets/OUMVLP-Pose" # "../../datasets/OUMVLP-Pose"
+  keypoints: openpose
+  batch_size: 1024
+  num_workers: 8
+  sequence_length: 30
